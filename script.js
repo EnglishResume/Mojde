@@ -39,9 +39,9 @@
             // SET INITIAL HEIGHT
             this.imgHeight = getImageHeight().height;
             // GET NEW IMAGE SIZE ONRESIZE
-            window.onresize = function(event) {
-                infoPanels.imgHeight = getImageHeight().height;
-            };
+            // window.onresize = function(event) {
+            //     infoPanels.imgHeight = getImageHeight().height;
+            // };
 
             // CHAINABLE CLASSLIST
             function chainClasses(el) {
@@ -61,10 +61,10 @@
             }
 
             // ADD LISTENER TO CARD
-            this.card.addEventListener('mouseenter', function(e) {
-                chainClasses(this).remove('inactive').add('active');
-                e.stopPropagation();
-            });
+            // this.card.addEventListener('mouseenter', function(e) {
+            //     chainClasses(this).remove('inactive').add('active');
+            //     e.stopPropagation();
+            // });
             // ADD LISTENER TO LIKES
             this.card.querySelector('.likes a').addEventListener('click', function(e) {
                 e.preventDefault();
@@ -105,11 +105,11 @@
             // on links existing within an parent element that has a mouseleave Listener attached,
             // which when clicked prematurely executes the mouseleave Listener.
             // The mouse "ghosts", triggering the mouseleave, though the mouse is still inside.
-            var mouseLeave = function() {
-                infoPanels.card.addEventListener('mouseleave', function(e) {
-                    checkImage();
-                }, false);
-            }();
+            // var mouseLeave = function() {
+            //     infoPanels.card.addEventListener('mouseleave', function(e) {
+            //         checkImage();
+            //     }, false);
+            // }();
 
             // DELAY VISIBILITY ON INITIAL PANEL
             setTimeout(function(){
